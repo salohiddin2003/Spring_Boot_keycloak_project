@@ -24,7 +24,7 @@ public class KeycloakClient {
     private final String keycloakUrl = "http://localhost:8080";
     private final String realm = "auth-realm";
     private final String clientId = "auth-service";
-    private final String clientSecret = "fcb7vi3ulfQMgp3EAYM57NW8KI5aiGvu";
+    private final String clientSecret = "zOpyIdsav0uGjV8Ay3vCDatRGYNCle15";
     private final String adminUsername = "admin";
     private final String adminPassword = "admin";
 

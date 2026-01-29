@@ -13,10 +13,16 @@ public class SecurityConfig {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        final String[] PUBLIC_URLS = {
+                "/auth/register",
+                "/auth/login",
+                "/auth/logout"
+        };
+
         http
                 .csrf(csrf -> csrf.disable()) // POST test uchun CSRF o‘chirildi
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/auth/**").permitAll() // auth endpoints ochiq
+                        .requestMatchers(PUBLIC_URLS).permitAll() // auth endpoints ochiq
                         .anyRequest().authenticated()
                 );
 
